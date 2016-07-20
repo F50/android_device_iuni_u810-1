@@ -38,20 +38,13 @@ fi
 start_sensors()
 {
     if [ -c /dev/msm_dsps -o -c /dev/sensors ]; then
-        mkdir -p /data/system/sensors
-        touch /data/system/sensors/settings
-        chmod -h 775 /data/system/sensors
-        chmod -h 664 /data/system/sensors/settings
-        chown -h system /data/system/sensors/settings
+        chmod -h 775 /persist/sensors
+        chmod -h 664 /persist/sensors/sensors_settings
+        chown -h system.root /persist/sensors/sensors_settings
 
         mkdir -p /data/misc/sensors
         chmod -h 775 /data/misc/sensors
 
-        if [ ! -s /data/system/sensors/settings ]; then
-            # If the settings file is empty, enable sensors HAL
-            # Otherwise leave the file with it's current contents
-            echo 1 > /data/system/sensors/settings
-        fi
         start sensors
     fi
 }
@@ -73,17 +66,20 @@ start_battery_monitor()
 	fi
 }
 
+#-h 	禁止遇到的符号链接指向的文件或目录的方式更改
 start_charger_monitor()
 {
 	if ls /sys/module/qpnp_charger/parameters/charger_monitor; then
 		chown -h root.system /sys/module/qpnp_charger/parameters/*
 		chown -h root.system /sys/class/power_supply/battery/input_current_max
 		chown -h root.system /sys/class/power_supply/battery/input_current_trim
+		chown -h root.system /sys/class/power_supply/battery/input_current_settled
 		chown -h root.system /sys/class/power_supply/battery/voltage_min
-		chmod  0664 /sys/class/power_supply/battery/input_current_max
-		chmod  0664 /sys/class/power_supply/battery/input_current_trim
-		chmod  0664 /sys/class/power_supply/battery/voltage_min
-		chmod  0664 /sys/module/qpnp_charger/parameters/charger_monitor
+		chmod -h 0664 /sys/class/power_supply/battery/input_current_max
+		chmod -h 0664 /sys/class/power_supply/battery/input_current_trim
+		chmod -h 0664 /sys/class/power_supply/battery/input_current_settled
+		chmod -h 0664 /sys/class/power_supply/battery/voltage_min
+		chmod -h 0664 /sys/module/qpnp_charger/parameters/charger_monitor
 		start charger_monitor
 	fi
 }

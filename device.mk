@@ -19,10 +19,10 @@ PRODUCT_COPY_FILES += \
     device/IUNI/U810/rootdir/twrp.fstab:recovery/root/etc/twrp.fstab 
 
 # U810 Init files
+#delete class_main.sh
 PRODUCT_COPY_FILES += \
     device/IUNI/U810/rootdir/init.qcom.rc:root/init.qcom.rc \
     device/IUNI/U810/rootdir/init.qcom.class_core.sh:root/init.qcom.class_core.sh \
-    device/IUNI/U810/rootdir/init.qcom.class_main.sh:root/init.qcom.class_main.sh \
     device/IUNI/U810/rootdir/init.qcom.early_boot.sh:root/init.qcom.early_boot.sh \
     device/IUNI/U810/rootdir/init.qcom.factory.sh:root/init.qcom.factory.sh \
     device/IUNI/U810/rootdir/init.qcom.sh:root/init.qcom.sh \
@@ -31,7 +31,7 @@ PRODUCT_COPY_FILES += \
     device/IUNI/U810/rootdir/init.qcom.usb.rc:root/init.qcom.usb.rc \
     device/IUNI/U810/rootdir/init.target.rc:root/init.target.rc \
     device/IUNI/U810/rootdir/fstab.qcom:root/fstab.qcom \
-    device/IUNI/U810/rootdir/ueventd.qcom.rc:root/ueventd.qcom.rc
+    device/IUNI/U810/rootdir/ueventd.rc:root/ueventd.rc
 
 # system/etc files
 PRODUCT_COPY_FILES += \
