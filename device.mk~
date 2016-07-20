@@ -45,7 +45,7 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml \
     device/IUNI/U810/media_codecs.xml:system/etc/media_codecs.xml \
-    device/IUNI/U810/media_profiles.xml:system/etc/media_profiles.xml \
+    device/IUNI/U810/media_profiles.xml:system/etc/media_profiles.xml
 	device/IUNI/U810/rootdir/etc/power_profiles.xml:system/etc/power_profiles.xml
 
 # Config files for touch and input
