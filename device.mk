@@ -23,7 +23,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/IUNI/U810/rootdir/init.qcom.rc:root/init.qcom.rc \
     device/IUNI/U810/rootdir/init.qcom.class_core.sh:root/init.qcom.class_core.sh \
-    device/IUNI/U810/rootdir/init.qcom.early_boot.sh:root/init.qcom.early_boot.sh \
+    device/IUNI/U810/rootdir/init.qcom.class_main.sh:root/init.qcom.class_main.sh \
+	device/IUNI/U810/rootdir/init.qcom.early_boot.sh:root/init.qcom.early_boot.sh \
     device/IUNI/U810/rootdir/init.qcom.factory.sh:root/init.qcom.factory.sh \
     device/IUNI/U810/rootdir/init.qcom.sh:root/init.qcom.sh \
     device/IUNI/U810/rootdir/init.qcom.ssr.sh:root/init.qcom.ssr.sh \
