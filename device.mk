@@ -31,7 +31,7 @@ PRODUCT_COPY_FILES += \
     device/IUNI/U810/rootdir/init.qcom.usb.rc:root/init.qcom.usb.rc \
     device/IUNI/U810/rootdir/init.target.rc:root/init.target.rc \
     device/IUNI/U810/rootdir/fstab.qcom:root/fstab.qcom \
-    device/IUNI/U810/rootdir/ueventd.rc:root/ueventd.rc
+    device/IUNI/U810/rootdir/ueventd.qcom.rc:root/ueventd.qcom.rc
 
 # system/etc files
 PRODUCT_COPY_FILES += \

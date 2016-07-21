@@ -28,8 +28,8 @@
 on init
     write /sys/class/android_usb/android0/f_rndis/wceis 1
 # Gionee liujiang 2014-10-21 add for U2KK descrptor start
-    write /sys/class/android_usb/android0/iProduct "Primo Z"
-    write /sys/class/android_usb/android0/iManufacturer WALTON
+#    write /sys/class/android_usb/android0/iProduct "Primo Z"
+#    write /sys/class/android_usb/android0/iManufacturer WALTON
 # Gionee liujiang 2014-10-21 add for U2KK descrptor end
 
 on charger
