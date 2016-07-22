@@ -102,7 +102,7 @@ BOARD_EGL_CFG := device/IUNI/U810/egl.cfg
 BOARD_USES_MULTIPLE_SDCARD_FS := true
 
 # fix this up by examining /proc/mtd on a running device
-BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --kernel_offset 0x00008000
+BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --kernel_offset 0x00008000 #--dt device/IUNI/U810/dt.img
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1073741824
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 3221225472
 BOARD_FLASH_BLOCK_SIZE := 131072

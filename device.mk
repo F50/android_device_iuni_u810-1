@@ -18,6 +18,10 @@ PRODUCT_COPY_FILES += \
     device/IUNI/U810/rootdir/init.qcom.usb.rc:recovery/root/init.usb.rc \
     device/IUNI/U810/rootdir/twrp.fstab:recovery/root/etc/twrp.fstab 
 
+#PRODUCT_COPY_FILES += \
+#    device/IUNI/U810/kernel:kernel \
+#    device/IUNI/U810/dt.img:dt.img
+
 # U810 Init files
 #delete class_main.sh
 PRODUCT_COPY_FILES += \
@@ -29,6 +33,7 @@ PRODUCT_COPY_FILES += \
     device/IUNI/U810/rootdir/init.qcom.sh:root/init.qcom.sh \
     device/IUNI/U810/rootdir/init.qcom.ssr.sh:root/init.qcom.ssr.sh \
     device/IUNI/U810/rootdir/init.qcom.syspart_fixup.sh:root/init.qcom.syspart_fixup.sh \
+    device/IUNI/U810/rootdir/init.qcom.usb.sh:root/init.qcom.usb.sh \
     device/IUNI/U810/rootdir/init.qcom.usb.rc:root/init.qcom.usb.rc \
     device/IUNI/U810/rootdir/init.target.rc:root/init.target.rc \
     device/IUNI/U810/rootdir/fstab.qcom:root/fstab.qcom \
@@ -52,8 +57,7 @@ PRODUCT_COPY_FILES += \
 # Config files for touch and input
 PRODUCT_COPY_FILES += \
     device/IUNI/U810/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
-    device/IUNI/U810/keylayout/Generic.kl:system/usr/keylayout/Generic.kl \
-    device/IUNI/U810/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl \
+    device/IUNI/U810/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
     device/IUNI/U810/keylayout/atmel_mxt_ts.kl:system/usr/keylayout/atmel_mxt_ts.kl \
     device/IUNI/U810/keylayout/synaptics_rmi4_i2c.kl:system/usr/keylayout/synaptics_rmi4_i2c.kl
 
@@ -121,7 +125,8 @@ PRODUCT_PACKAGES += \
     copybit.msm8974 \
     camera.msm8974 \
     memtrack.msm8974 \
-    lights.msm8974 \
+#    lights.msm8974 \
+    lights.u810
     keystore.msm8974 \
     power.msm8974
 

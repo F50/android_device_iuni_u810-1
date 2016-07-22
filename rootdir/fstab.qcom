@@ -19,6 +19,5 @@
 /dev/block/platform/msm_sdcc.1/by-name/rpm /rpm emmc defaults defaults
 /dev/block/platform/msm_sdcc.1/by-name/aboot /aboot emmc defaults defaults
 /devices/msm_sdcc.1/mmc_host* auto auto defaults voldmanaged=sdcard0:20,nonremovable,noemulatedsd
-/devices/msm_sdcc.2/mmc_host* auto       auto      defaults      voldmanaged=sdcard1:auto
 /devices/platform/xhci-hcd*              auto        auto    defaults     voldmanaged=usbdisk:auto
 

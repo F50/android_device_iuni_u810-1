@@ -35,12 +35,15 @@ $(call inherit-product, device/IUNI/U810/device.mk)
 PRODUCT_NAME := omni_U810
 PRODUCT_DEVICE := U810
 PRODUCT_BRAND := IUNI
-PRODUCT_MODEL := IUNI
+PRODUCT_MODEL := IUNI U810
 PRODUCT_LOCALES += xxhdpi xhdpi hdpi
 PRODUCT_MANUFACTURER := IUNI
 
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/IUNI/U810
 TARGET_KERNEL_CONFIG := U810_defconfig
+##############try to use prebuilt kernel################
+#TARGET_PREBUILT_KERNEL := device/IUNI/U810/kernel
+##############try to use prebuilt kernel################
 
 $(call inherit-product-if-exists, vendor/IUNI/U810/U810-vendor.mk)
