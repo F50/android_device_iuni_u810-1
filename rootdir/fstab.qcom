@@ -8,9 +8,6 @@
 #<src>                                                <mnt_point>  <type>  <mnt_flags and options>                     <fs_mgr_flags>
 /dev/block/platform/msm_sdcc.1/by-name/system         /system      ext4    ro,barrier=1,discard                                wait
 /dev/block/platform/msm_sdcc.1/by-name/userdata       /data        ext4    nosuid,nodev,barrier=1,noauto_da_alloc,discard      wait,check,encryptable=footer
-/dev/block/platform/msm_sdcc.1/by-name/boot           /boot        emmc    defaults 						defaults
-#/devices/msm_sdcc.2/mmc_host                          /storage/sdcard1   vfat    nosuid,nodev         wait,voldmanaged=sdcard1:auto
-#gionee, chuqf, for otg, begin
-/devices/msm_sdcc.1/mmc_host                 auto         vfat    defaults                    wait,voldmanaged=sdcard0:20,auto
-/devices/platform/xhci-hcd/usb1               auto    vfat    defaults         voldmanaged=usbotg:auto
-#gionee, chuqf, for otg, end
+#xiaoqian, 20131115, modified for internal sd card
+/devices/msm_sdcc.1/mmc_host         /storage/sdcard0   vfat    nosuid,nodev         wait,voldmanaged=sdcard:20
+/devices/platform/xhci-hcd/usb1 	/storage/usbotg 	vfat 	nosuid,nodev 	wait,voldmanaged=usbotg:auto

@@ -24,7 +24,7 @@ PRODUCT_COPY_FILES += \
     device/IUNI/U810/rootdir/init.qcom.rc:root/init.qcom.rc \
     device/IUNI/U810/rootdir/init.qcom.class_core.sh:root/init.qcom.class_core.sh \
     device/IUNI/U810/rootdir/init.qcom.class_main.sh:root/init.qcom.class_main.sh \
-	device/IUNI/U810/rootdir/init.qcom.early_boot.sh:root/init.qcom.early_boot.sh \
+    device/IUNI/U810/rootdir/init.qcom.early_boot.sh:root/init.qcom.early_boot.sh \
     device/IUNI/U810/rootdir/init.qcom.factory.sh:root/init.qcom.factory.sh \
     device/IUNI/U810/rootdir/init.qcom.sh:root/init.qcom.sh \
     device/IUNI/U810/rootdir/init.qcom.ssr.sh:root/init.qcom.ssr.sh \
@@ -47,11 +47,13 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml \
     device/IUNI/U810/media_codecs.xml:system/etc/media_codecs.xml \
     device/IUNI/U810/media_profiles.xml:system/etc/media_profiles.xml \
-	device/IUNI/U810/rootdir/etc/power_profiles.xml:system/etc/power_profiles.xml
+    device/IUNI/U810/rootdir/etc/power_profiles.xml:system/etc/power_profiles.xml
 
 # Config files for touch and input
 PRODUCT_COPY_FILES += \
     device/IUNI/U810/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
+    device/IUNI/U810/keylayout/Generic.kl:system/usr/keylayout/Generic.kl \
+    device/IUNI/U810/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl \
     device/IUNI/U810/keylayout/atmel_mxt_ts.kl:system/usr/keylayout/atmel_mxt_ts.kl \
     device/IUNI/U810/keylayout/synaptics_rmi4_i2c.kl:system/usr/keylayout/synaptics_rmi4_i2c.kl
 

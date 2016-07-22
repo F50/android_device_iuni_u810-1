@@ -27,13 +27,13 @@
 
 # mount point	fstype		device			[device2] [length=]
 
-/dev/block/platform/msm_sdcc.1/by-name/system       /system         ext4    ro,barrier=1                                                    wait
-/dev/block/platform/msm_sdcc.1/by-name/cache        /cache          ext4    noatime,nosuid,nodev,barrier=1,data=ordered                     wait,check
-/dev/block/platform/msm_sdcc.1/by-name/userdata     /data           ext4    noatime,nosuid,nodev,barrier=1,data=ordered,noauto_da_alloc     wait,check
-#xiaoqian, 20140109, modified for sd mount on recovery mode, begin
-/dev/block/mmcblk0p20                              /sdcard           vfat    nosuid,nodev,barrier=1,data=ordered,nodelalloc                  wait
-#xiaoqian, 20140109, modified for sd mount on recovery mode, end
-/dev/block/platform/msm_sdcc.1/by-name/boot         /boot           emmc    defaults                                                        defaults
-/dev/block/platform/msm_sdcc.1/by-name/recovery     /recovery       emmc    defaults                                                        defaults
-/dev/block/platform/msm_sdcc.1/by-name/misc         /misc           emmc    defaults                                                        defaults
+/boot		   emmc		/dev/block/platform/msm_sdcc.1/by-name/boot
+/system		   ext4		/dev/block/platform/msm_sdcc.1/by-name/system
+/data		   ext4		/dev/block/platform/msm_sdcc.1/by-name/userdata
+/cache		   ext4		/dev/block/platform/msm_sdcc.1/by-name/cache
+/recovery	   emmc		/dev/block/platform/msm_sdcc.1/by-name/recovery
+/persist      ext4     /dev/block/platform/msm_sdcc.1/by-name/persist
+/sdcard		   vfat		/dev/block/mmcblk1p1	/dev/block/mmcblk0p20 flags=storage
+/usb-otg      vfat          /dev/block/sda1     /dev/block/sda  flags=removable;storage;display=USB-OTG
+                                                      defaults
 

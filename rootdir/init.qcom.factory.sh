@@ -245,4 +245,3 @@
     start qcamerasvr
     start qcom-usb-sh
     start qcomsysd
-    start ptt_ffbm
