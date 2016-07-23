@@ -126,7 +126,7 @@ PRODUCT_PACKAGES += \
     camera.msm8974 \
     memtrack.msm8974 \
 #    lights.msm8974 \
-    lights.u810
+    lights.u810 \
     keystore.msm8974 \
     power.msm8974
 
