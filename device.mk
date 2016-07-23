@@ -33,7 +33,6 @@ PRODUCT_COPY_FILES += \
     device/IUNI/U810/rootdir/init.qcom.sh:root/init.qcom.sh \
     device/IUNI/U810/rootdir/init.qcom.ssr.sh:root/init.qcom.ssr.sh \
     device/IUNI/U810/rootdir/init.qcom.syspart_fixup.sh:root/init.qcom.syspart_fixup.sh \
-    device/IUNI/U810/rootdir/init.qcom.usb.sh:root/init.qcom.usb.sh \
     device/IUNI/U810/rootdir/init.qcom.usb.rc:root/init.qcom.usb.rc \
     device/IUNI/U810/rootdir/init.target.rc:root/init.target.rc \
     device/IUNI/U810/rootdir/fstab.qcom:root/fstab.qcom \
@@ -51,8 +50,7 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml \
     device/IUNI/U810/media_codecs.xml:system/etc/media_codecs.xml \
-    device/IUNI/U810/media_profiles.xml:system/etc/media_profiles.xml \
-    device/IUNI/U810/rootdir/etc/power_profiles.xml:system/etc/power_profiles.xml
+    device/IUNI/U810/media_profiles.xml:system/etc/media_profiles.xml
 
 # Config files for touch and input
 PRODUCT_COPY_FILES += \
@@ -86,7 +84,8 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.ethernet.xml:system/etc/permissions/android.hardware.ethernet.xml
 
 PRODUCT_COPY_FILES += \
-    device/IUNI/U810/thermal-engine-8974.conf:system/etc/thermal-engine-8974.conf
+    device/IUNI/U810/thermal-engine-8974.conf:system/etc/thermal-engine-8974.conf \
+    device/IUNI/U810/rootdir/etc/power_profiles.xml:system/etc/power_profiles.xml
     
 
 # Wifi config
@@ -125,8 +124,7 @@ PRODUCT_PACKAGES += \
     copybit.msm8974 \
     camera.msm8974 \
     memtrack.msm8974 \
-#    lights.msm8974 \
-    lights.u810 \
+    lights.msm8974 \
     keystore.msm8974 \
     power.msm8974
 
@@ -170,8 +168,11 @@ PRODUCT_PACKAGES += \
     libOmxVenc \
     libOmxCore \
     libstagefrighthw \
-    libc2dcolorconvert
-
+    libc2dcolorconvert \
+    libqdutils \
+    libqdMetaData \
+    libdashplayer
+    
 #    libOmxAacEnc \
 #    libOmxAmrEnc \
 #    libOmxEvrcEnc \

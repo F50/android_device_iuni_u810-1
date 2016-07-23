@@ -45,7 +45,9 @@ else
     soc_hwver=`cat /sys/devices/system/soc/soc0/platform_version` 2> /dev/null
 fi
 
-log -t BOOT -p i "MSM target '$1', SoC '$soc_hwplatform', HwID '$soc_hwid', SoC ver '$soc_hwver'"
+virtual_size=`cat /sys/class/graphics/fb0/virtual_size` 2> /dev/null
+
+log -t BOOT -p i "MSM target '$1', SoC '$soc_hwplatform', HwID '$soc_hwid', SoC ver '$soc_hwver', virtual_size '$virtual_size'"
 
 case "$1" in
     "msm7630_surf" | "msm7630_1x" | "msm7630_fusion")
